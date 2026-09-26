@@ -1,5 +1,6 @@
 package com.example.arquiteturaspring.montadora.api;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,6 +22,7 @@ public class TestFabricaController {
     // e o requestbody vai mapear o corpo da requisicao
 
     @Autowired
+    @Qualifier ("motorTurbo")
     private Motor motor;
 
     @PostMapping
